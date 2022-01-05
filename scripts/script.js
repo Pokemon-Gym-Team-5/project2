@@ -6,7 +6,7 @@ pokemonApp.btn = document.querySelector('.randomBtn')
 pokemonApp.img = document.querySelector('.imgContaniner')
 pokemonApp.name = document.querySelector('.pokemonName')
 pokemonApp.type = document.querySelector('.pokemonType')
-pokemonApp.Abilitys = document.querySelector('.pokemonAbilitys')
+pokemonApp.abilities = document.querySelector('.pokemonAbilities')
 
 pokemonApp.getAllPokemon = () => {
     fetch(pokemonApp.url).then((res) => {
@@ -19,7 +19,7 @@ pokemonApp.getAllPokemon = () => {
 
 
 pokemonApp.getRandom = (jsonResults1) => {
-    pokemonApp.btn.addEventListener('click', function () {
+    pokemonApp.btn.addEventListener('click', function() {
         randomNum = Math.floor(Math.random() * jsonResults1.length)
         fetch(jsonResults1[randomNum].url).then((res) => {
             return res.json()
@@ -29,31 +29,35 @@ pokemonApp.getRandom = (jsonResults1) => {
         pokemonApp.img.innerHTML = '';
         pokemonApp.name.innerHTML = '';
         pokemonApp.type.innerHTML = '';
+        pokemonApp.abilities.innerHTML = '';
 
     });
 };
 
 pokemonApp.displayPokemon = (jsonResults2) => {
-    
+
     const imgElement = document.createElement('img')
     const nameElement = document.createElement('h2')
-    const arrayListOfType = jsonResults2.types
-        arrayListOfType.forEach((arrayTypes) => {
-           const typeElement = document.createElement('p')
-           typeElement.innerHTML = arrayTypes.type.name
-           pokemonApp.type.appendChild(typeElement);
-    })
 
-    
-    
+    const arrayListOfType = jsonResults2.types
+    arrayListOfType.forEach((arrayTypes) => {
+        const typeElement = document.createElement('li')
+        typeElement.innerHTML = arrayTypes.type.name
+        pokemonApp.type.appendChild(typeElement);
+    });
+
+    const arrayListOfAbilities = jsonResults2.abilities;
+    arrayListOfAbilities.forEach((arrayAbilities) => {
+        const abilitiesElement = document.createElement('li')
+        abilitiesElement.innerHTML = arrayAbilities.ability.name
+        pokemonApp.abilities.appendChild(abilitiesElement);
+    });
+
     imgElement.src = jsonResults2.sprites.other['official-artwork'].front_default
     nameElement.innerHTML = jsonResults2.name
-   
-    
+
     pokemonApp.img.appendChild(imgElement);
     pokemonApp.name.appendChild(nameElement);
-  
-
 
 };
 
