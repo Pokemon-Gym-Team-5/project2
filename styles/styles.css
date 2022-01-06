@@ -290,7 +290,7 @@ html {
 
 h1 {
   font-family: "Pokemon Solid", sans-serif;
-  color: #FFFFFE;
+  color: #FFDE00;
   font-size: 2rem;
   letter-spacing: 5px;
   text-align: center;
@@ -308,9 +308,12 @@ button {
 button {
   padding: 20px 40px;
   border: transparent;
-  background-color: #CC0000;
-  color: #FFFFFE;
   margin-bottom: 50px;
+  background-color: #FFDE00;
+  color: #CC0000;
+  font-family: "Pokemon Solid", sans-serif;
+  letter-spacing: 3px;
+  border: 3px solid #CC0000;
 }
 
 footer {
@@ -319,7 +322,7 @@ footer {
 }
 footer p,
 footer a {
-  color: #FFFFFE;
+  color: #FFDE00;
   text-decoration: none;
   font-size: 0.8rem;
 }
@@ -346,7 +349,7 @@ section .imgPlaceholder {
   padding: 100px;
 }
 section .imgPlaceholder img {
-  width: 50%;
+  width: 20%;
 }
 
 .banner img {
