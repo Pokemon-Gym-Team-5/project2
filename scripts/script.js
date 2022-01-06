@@ -1,5 +1,13 @@
 pokemonApp = {};
 
+pokemonApp.placeholder = {
+    img: "./assets/pokeball.png",
+    name: "Pokeball",
+    type: "????????",
+    abilities: "??????????"
+}
+
+
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
 
 pokemonApp.btn = document.querySelector('.randomBtn')
@@ -7,6 +15,26 @@ pokemonApp.img = document.querySelector('.imgContaniner')
 pokemonApp.name = document.querySelector('.pokemonName')
 pokemonApp.type = document.querySelector('.pokemonType')
 pokemonApp.abilities = document.querySelector('.pokemonAbilities')
+
+window.addEventListener("DOMContentLoaded", () => {
+    const placeholder = pokemonApp.placeholder
+    const imgElementHolder = document.createElement('img')    
+    const nameElementHolder = document.createElement('p')    
+    const typeElementHolder = document.createElement('p')    
+    const abilitiesElementHolder = document.createElement('p')    
+    
+    imgElementHolder.src = placeholder.img
+    nameElementHolder.innerHTML = placeholder.name
+    typeElementHolder.innerHTML = placeholder.type
+    abilitiesElementHolder.innerHTML = placeholder.abilities
+
+    pokemonApp.img.appendChild(imgElementHolder);
+    pokemonApp.name.appendChild(nameElementHolder);
+    pokemonApp.type.appendChild(typeElementHolder);
+    pokemonApp.abilities.appendChild(abilitiesElementHolder);
+
+   
+});
 
 pokemonApp.getAllPokemon = () => {
     fetch(pokemonApp.url).then((res) => {
