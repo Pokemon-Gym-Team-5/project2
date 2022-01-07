@@ -6,43 +6,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokedex Random Generator</title>
-    <link href=“http://fonts.cdnfonts.com/css/pokemon-solid” rel=“stylesheet”>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
+
     <header>
-        <h1>Random Pokedex Generator</h1>
+        <div class="wrapper">
+            <h1><a href="https://blissful-kilby-d70f1a.netlify.app/">Random Pokedex Generator</a></h1>
+        </div>
     </header>
 
     <main>
         <section>
-            <div class="imgAndNameContainer">
-                <div class="imgContaniner">
-                </div>
-                <div class="pokemonName">
+            <div class="wrapper">
+            
+                    <div class="pikachuGif">
+                        <img src="./assets/waving-pikachu.gif" alt="pikachu gif waving">
+                        <button class="randomBtn">I Choose You!!</button>
+                    </div>
+                    
+                <div class="pokemonInfo">
+                    <div class="imgContainer">
+                        <div class="imgContaniner">
+                        </div>
+                    </div>
+                    <div class="textContainer">
+                        <div class="pokemonName">
+                        </div>
+                        <h3>Types</h3>
+                        <ul class="pokemonType">
+                        </ul>
+                        <h3>Abilities</h3>
+                        <ul class="pokemonAbilities">
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="typeAndAbilities">
-                <ul class="pokemonType">
-                </ul>
-                <ul class="pokemonAbilities">
-                </ul>
-            </div>
-
-            <button class="randomBtn">I Choose You!!</button>
         </section>
 
-        <section class="banner">
-            <img src="./assets/image.png" alt="Pokemon banner">
+        <section>
+            <div class="wrapper">
+                <div class="banner">
+                    <img src="./assets/image.png" alt="Pokemon banner">
+                </div>
+            </div>
         </section>
 
     </main>
+
     <footer>
-        <p>2022 | Created at <a href="https://junocollege.com/">Juno College</a> by Solomon Serry and Pauline Sulit</p>
+        <div class="wrapper">
+            <p>2022 | Created at <a href="https://junocollege.com/">Juno College</a> by Solomon Serry and Pauline Sulit</p>
+        </div>
     </footer>
+
     <script src="./scripts/script.js"></script>
+
 </body>
 
 </html>
