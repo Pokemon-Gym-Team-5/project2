@@ -1,57 +1,14 @@
 @import url('http://fonts.cdnfonts.com/css/pokemon-solid');
 @import "partials/setup";
 @import "partials/variables";
-// typography
-html {
-    font-size: 125%;
-}
-
-h1 {
-    font-family: "Pokemon Solid", sans-serif;
-    color: #FFDE00;
-    font-size: 2rem;
-    letter-spacing: 5px;
-    text-align: center;
-    padding: 50px;
-}
-
-h2,
-p,
-a,
-li,
-button {
-    font-family: ‘Lato’, sans-serif;
-}
-
-button {
-    padding: 20px 40px;
-    border: transparent;
-    margin-bottom: 50px;
-    background-color: #FFDE00;
-    color: #CC0000;
-    font-family: "Pokemon Solid", sans-serif;
-    letter-spacing: 3px;
-    border: 3px solid #CC0000;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    p,
-    a {
-        color: #FFDE00;
-        text-decoration: none;
-        font-size: 0.8rem;
-    }
-}
+@import "partials/typography";
 
 // general styles
-body {
+.wrapper {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
 }
-
 
 ul {
     list-style-type: none;
@@ -63,18 +20,65 @@ footer {
     background-color: $primaryRed;
 }
 
+h1 {
+    padding: 50px;
+}
+
 // main
+// first section - pokemon info
 section {
     text-align: center;
+    .pokemonInfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        background-color: $yellowColor;
+        border: 10px solid $primaryRed;
+        border-radius: 50px;
+        padding: 50px;
+        .textContainer {
+            h2 {
+                padding-bottom: 30px;
+            }
+            h3 {
+                padding: 10px;
+            }
+            li {
+                padding: 1px;
+            }
+        }
+    }
     .imgPlaceholder {
         padding: 100px;
         img {
             width: 20%;
         }
     }
+    
+    .pikachuGif {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        img {
+            width: 20%;
+        }
+    }
+    button {
+        padding: 20px 40px;
+        border: transparent;
+        margin: 50px 0;
+        background-color: $yellowColor;
+        border: 5px solid $primaryRed;
+    }
 }
 
+// section section - banner
 .banner img {
     width: 100%;
 }
 
+footer {
+    padding: 20px;
+}

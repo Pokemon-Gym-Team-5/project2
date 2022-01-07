@@ -2,6 +2,7 @@ pokemonApp = {};
 
 pokemonApp.placeholder = {
     img: "./assets/pokeball.png",
+    alt: "photo of pokeball",
     name: "Pokeball",
     type: "????????",
     abilities: "??????????"
@@ -19,11 +20,12 @@ pokemonApp.abilities = document.querySelector('.pokemonAbilities')
 window.addEventListener("DOMContentLoaded", () => {
     const placeholder = pokemonApp.placeholder
     const imgElementHolder = document.createElement('img')    
-    const nameElementHolder = document.createElement('p')    
-    const typeElementHolder = document.createElement('p')    
-    const abilitiesElementHolder = document.createElement('p')    
+    const nameElementHolder = document.createElement('h2')    
+    const typeElementHolder = document.createElement('li')    
+    const abilitiesElementHolder = document.createElement('li')    
     
     imgElementHolder.src = placeholder.img
+    imgElementHolder.alt = placeholder.alt
     nameElementHolder.innerHTML = placeholder.name
     typeElementHolder.innerHTML = placeholder.type
     abilitiesElementHolder.innerHTML = placeholder.abilities
@@ -82,6 +84,7 @@ pokemonApp.displayPokemon = (jsonResults2) => {
     });
 
     imgElement.src = jsonResults2.sprites.other['official-artwork'].front_default
+    imgElement.alt = `photo of ${jsonResults2.name}`
     nameElement.innerHTML = jsonResults2.name
 
     pokemonApp.img.appendChild(imgElement);
