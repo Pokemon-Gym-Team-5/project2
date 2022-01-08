@@ -316,6 +316,8 @@ section {
 }
 section:first-of-type {
   background-image: url("../assets/lightning.png");
+  background-position: center;
+  background-size: cover;
 }
 section .pokemonInfo {
   display: -webkit-box;
@@ -343,7 +345,7 @@ section .pokemonInfo .imgContainer img {
   -webkit-transition: 0.5s cubic-bezier(0.22, 0.82, 0.83, 1);
   transition: 0.5s cubic-bezier(0.22, 0.82, 0.83, 1);
 }
-section .pokemonInfo .imgContainer img:hover {
+section .pokemonInfo .imgContainer img:hover, section .pokemonInfo .imgContainer img:focus {
   width: 70%;
   -webkit-filter: drop-shadow(0 10px 0.6rem black);
           filter: drop-shadow(0 10px 0.6rem black);
@@ -405,7 +407,7 @@ section button {
   background-color: #FFDE00;
   border: 5px solid #CC0000;
 }
-section button:hover {
+section button:hover, section button:focus {
   color: yellow;
   background-color: #CC0000;
   -webkit-transition: 0.5s background-color ease;
@@ -422,6 +424,9 @@ footer {
 }
 
 @media (max-width: 1060px) {
+  section .pikachuGif img {
+    width: 200px;
+  }
   section .pokemonInfo {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

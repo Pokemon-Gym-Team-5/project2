@@ -32,6 +32,8 @@ section {
     text-align: center;
     &:first-of-type {
         background-image: url('../assets/lightning.png');
+        background-position: center;
+        background-size: cover;
     }
     .pokemonInfo {
         display: flex;
@@ -49,7 +51,7 @@ section {
             img {
                 width: 60%;
                 transition: 0.5s cubic-bezier(.22,.82,.83,1);
-                &:hover {
+                &:hover, &:focus {
                     width: 70%;
                     filter: drop-shadow(0 10px 0.6rem black);
                 }
@@ -105,7 +107,7 @@ section {
         margin: 50px 0;
         background-color: $yellowColor;
         border: 5px solid $primaryRed;
-        &:hover {
+        &:hover, &:focus {
             color: yellow;
             background-color: $primaryRed;
             transition: 0.5s background-color ease;

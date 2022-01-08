@@ -1,25 +1,30 @@
 @media (max-width: 1060px) {
-    section .pokemonInfo {
-        flex-direction: column;
-        width: 50%;
-        height: 80vh;
-        padding: 40px 30px 20px 30px;
-        .imgContainer, .textContainer {
-            width: 100%;
-            height: 50%;
+    section {
+        .pikachuGif img {
+            width: 200px;
         }
-        .imgContainer {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            img {
-                width: 200px;
+        .pokemonInfo {
+            flex-direction: column;
+            width: 50%;
+            height: 80vh;
+            padding: 40px 30px 20px 30px;
+            .imgContainer, .textContainer {
+                width: 100%;
+                height: 50%;
             }
-        }
-        .textContainer {
-            h2 {
-                padding-bottom: 0;
-                padding-top: 20px;
+            .imgContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                img {
+                    width: 200px;
+                }
+            }
+            .textContainer {
+                h2 {
+                    padding-bottom: 0;
+                    padding-top: 20px;
+                }
             }
         }
     }
