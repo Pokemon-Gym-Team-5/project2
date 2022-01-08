@@ -8,26 +8,27 @@ pokemonApp.placeholder = {
     abilities: "??????????"
 }
 
-pokemonApp.typeIcon = [
-    { bug: "./assets/pokemon-type-icon/Bug.webp" },
-    { dark: "./assets/pokemon-type-icon/Dark.webp" },
-    { dragon: "./assets/pokemon-type-icon/Dragon.webp" },
-    { electric: "./assets/pokemon-type-icon/Electric.webp" },
-    { fariy: "./assets/pokemon-type-icon/Fairy.webp" },
-    { fighting: "./assets/pokemon-type-icon/Fighting.webp" },
-    { fire: "./assets/pokemon-type-icon/Fire.webp" },
-    { flying: "./assets/pokemon-type-icon/Flying.webp" },
-    { ghost: "./assets/pokemon-type-icon/Ghost.webp" },
-    { grass: "./assets/pokemon-type-icon/Grass.webp" },
-    { ground: "./assets/pokemon-type-icon/Ground.webp" },
-    { ice: "./assets/pokemon-type-icon/Ice.webp" },
-    { normal: "./assets/pokemon-type-icon/Normal.webp" },
-    { poison: "./assets/pokemon-type-icon/Poison.webp" },
-    { psychic: "./assets/pokemon-type-icon/Psychic.webp" },
-    { rock: "./assets/pokemon-type-icon/Rock.webp" },
-    { steel: "./assets/pokemon-type-icon/Steel.webp" },
-    { water: "./assets/pokemon-type-icon/Water.webp" }
-]
+pokemonApp.typeIcon = {
+    bug: "./assets/pokemon-type-icon/Bug.webp",
+    dark: "./assets/pokemon-type-icon/Dark.webp",
+    dragon: "./assets/pokemon-type-icon/Dragon.webp",
+    electric: "./assets/pokemon-type-icon/Electric.webp",
+    ariy: "./assets/pokemon-type-icon/Fairy.webp",
+    ighting: "./assets/pokemon-type-icon/Fighting.webp",
+    fire: "./assets/pokemon-type-icon/Fire.webp",
+    flying: "./assets/pokemon-type-icon/Flying.webp",
+    host: "./assets/pokemon-type-icon/Ghost.webp",
+    grass: "./assets/pokemon-type-icon/Grass.webp",
+    ground: "./assets/pokemon-type-icon/Ground.webp",
+    ice: "./assets/pokemon-type-icon/Ice.webp",
+    normal: "./assets/pokemon-type-icon/Normal.webp",
+    poison: "./assets/pokemon-type-icon/Poison.webp",
+    psychic: "./assets/pokemon-type-icon/Psychic.webp",
+    rock: "./assets/pokemon-type-icon/Rock.webp",
+    steel: "./assets/pokemon-type-icon/Steel.webp",
+    water: "./assets/pokemon-type-icon/Water.webp"
+}
+
 
 
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
@@ -95,9 +96,21 @@ pokemonApp.displayPokemon = (jsonResults2) => {
 
     const arrayListOfType = jsonResults2.types
     arrayListOfType.forEach((arrayTypes) => {
-        const typeElement = document.createElement('li')
-        typeElement.innerHTML = arrayTypes.type.name
-        pokemonApp.type.appendChild(typeElement);
+        const IconLiElement = document.createElement('li')
+        const iconElement = document.createElement('img')
+        // typeElement.innerHTML = arrayTypes.type.name
+        // pokemonApp.type.appendChild(typeElement);
+
+        for (let item in pokemonApp.typeIcon) {
+            if (item === arrayTypes.type.name) {
+                iconElement.src = pokemonApp.typeIcon[item]
+                iconElement.alt = `icon for ${item}`
+                iconElement.classList.add('typeIcon')
+                IconLiElement.appendChild(iconElement);
+                pokemonApp.type.appendChild(IconLiElement);
+            }
+        }
+
     });
 
     const arrayListOfAbilities = jsonResults2.abilities;

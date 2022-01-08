@@ -291,6 +291,10 @@ footer a {
   font-size: 0.8rem;
 }
 
+.typeIcon {
+  width: 10px;
+}
+
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
