@@ -33,7 +33,7 @@ pokemonApp.typeIcon = [
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
 
 pokemonApp.btn = document.querySelector('.randomBtn')
-pokemonApp.img = document.querySelector('.imgContaniner')
+pokemonApp.img = document.querySelector('.imgContainer')
 pokemonApp.name = document.querySelector('.pokemonName')
 pokemonApp.type = document.querySelector('.pokemonType')
 pokemonApp.abilities = document.querySelector('.pokemonAbilities')

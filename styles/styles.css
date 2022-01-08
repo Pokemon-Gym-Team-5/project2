@@ -259,7 +259,7 @@ h1 a {
 
 h2 {
   text-transform: uppercase;
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 h2,
@@ -301,17 +301,21 @@ ul {
   list-style-type: none;
 }
 
-header,
-footer {
-  background-color: #CC0000;
+header {
+  background: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(#CC0000), to(white));
+  background: linear-gradient(black, #CC0000, white);
 }
 
 h1 {
   padding: 50px;
+  text-shadow: 8px 8px black;
 }
 
 section {
   text-align: center;
+}
+section:first-of-type {
+  background-image: url("../assets/lightning.png");
 }
 section .pokemonInfo {
   display: -webkit-box;
@@ -323,21 +327,50 @@ section .pokemonInfo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 90%;
+  width: 70%;
   margin: 0 auto;
   background-color: #FFDE00;
   border: 10px solid #CC0000;
   border-radius: 50px;
   padding: 50px;
-  height: 600px;
+  height: 50vh;
+}
+section .pokemonInfo .imgContainer {
+  width: 60%;
+}
+section .pokemonInfo .imgContainer img {
+  width: 60%;
+  -webkit-transition: 0.5s cubic-bezier(0.22, 0.82, 0.83, 1);
+  transition: 0.5s cubic-bezier(0.22, 0.82, 0.83, 1);
+}
+section .pokemonInfo .imgContainer img:hover {
+  width: 70%;
+  -webkit-filter: drop-shadow(0 10px 0.6rem black);
+          filter: drop-shadow(0 10px 0.6rem black);
+}
+section .pokemonInfo .textContainer {
+  width: 40%;
 }
 section .pokemonInfo .textContainer h2 {
   padding-bottom: 30px;
+  text-shadow: 5px 5px red;
 }
-section .pokemonInfo .textContainer h3 {
+section .pokemonInfo .textContainer .typeAndAbilities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+section .pokemonInfo .textContainer .typeAndAbilities .typeContainer, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer {
   padding: 10px;
 }
-section .pokemonInfo .textContainer li {
+section .pokemonInfo .textContainer .typeAndAbilities .typeContainer h3, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer h3 {
+  padding: 10px;
+  text-shadow: 5px 5px red;
+}
+section .pokemonInfo .textContainer .typeAndAbilities .typeContainer li, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer li {
   padding: 1px;
 }
 section .imgPlaceholder {
@@ -369,9 +402,16 @@ section .pikachuGif img {
 section button {
   padding: 20px 40px;
   border: transparent;
+  border-radius: 15px;
   margin: 50px 0;
   background-color: #FFDE00;
   border: 5px solid #CC0000;
+}
+section button:hover {
+  color: yellow;
+  background-color: #CC0000;
+  -webkit-transition: 0.5s background-color ease;
+  transition: 0.5s background-color ease;
 }
 
 .banner img {
@@ -380,4 +420,83 @@ section button {
 
 footer {
   padding: 20px;
+  background: #CC0000;
+}
+
+@media (max-width: 1060px) {
+  section .pokemonInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    height: 80vh;
+    padding: 40px 30px 20px 30px;
+  }
+  section .pokemonInfo .imgContainer, section .pokemonInfo .textContainer {
+    width: 100%;
+    height: 50%;
+  }
+  section .pokemonInfo .imgContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section .pokemonInfo .imgContainer img {
+    width: 200px;
+  }
+  section .pokemonInfo .textContainer h2 {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 846px) {
+  section .pikachuGif {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .pikachuGif button {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  section .pokemonInfo {
+    height: 90vh;
+  }
+  section .pokemonInfo .imgContainer img:hover {
+    width: 100%;
+  }
+  section .pokemonInfo .typeAndAbilities {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .pokemonInfo .typeAndAbilities h2 {
+    padding-top: 0;
+  }
+}
+@media (max-width: 700px) {
+  section .pokemonInfo {
+    width: 80%;
+  }
+  section .pokemonInfo .imgContainer img:hover {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  section .pokemonInfo {
+    width: 95%;
+    height: 100vh;
+  }
 }

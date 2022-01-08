@@ -1,0 +1,80 @@
+@media (max-width: 1060px) {
+    section .pokemonInfo {
+        flex-direction: column;
+        width: 50%;
+        height: 80vh;
+        padding: 40px 30px 20px 30px;
+        .imgContainer, .textContainer {
+            width: 100%;
+            height: 50%;
+        }
+        .imgContainer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+                width: 200px;
+            }
+        }
+        .textContainer {
+            h2 {
+                padding-bottom: 0;
+                padding-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 846px) {
+    section {
+        .pikachuGif {
+            flex-direction: column;
+            align-items: center;
+            button {
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+        }
+        .pokemonInfo {
+            height: 90vh;
+
+            .imgContainer {
+                img {
+                    &:hover {
+                        width: 100%;
+                    }
+                }
+            }
+            .typeAndAbilities {
+                flex-direction: column;
+                h2 {
+                    padding-top: 0;
+                }
+            } 
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    section {
+        .pokemonInfo {
+            width: 80%;
+            .imgContainer {
+                img {
+                    &:hover {
+                        width: 70%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    section {
+        .pokemonInfo {
+            width: 95%;
+            height: 100vh;
+        }
+    }
+}
