@@ -21,6 +21,11 @@
                 padding-bottom: 0;
                 padding-top: 20px;
             }
+            .pokemonId {
+                h4 {
+                    padding-top: 15px;
+                }
+            }    
         }
     }
 }
@@ -34,6 +39,7 @@
                 margin-top: 0;
                 margin-bottom: 20px;
             }
+            
         }
         .pokemonInfo {
             height: 90vh;
@@ -45,12 +51,18 @@
                     }
                 }
             }
-            .typeAndAbilities {
-                flex-direction: column;
-                h2 {
-                    padding-top: 0;
-                }
-            } 
+            .textContainer {
+                .typeAndAbilities {
+                    flex-direction: column;
+                    h2 {
+                        padding-top: 0;
+                    }
+                    .typeContainer, .abilitiesContainer{
+                        width: 100%;
+                    }
+                } 
+
+            }
         }
     }
 }

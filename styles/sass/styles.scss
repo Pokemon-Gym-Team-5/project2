@@ -45,7 +45,7 @@ section {
         padding: 50px;
         height: 50vh;
         .imgContainer {
-            width: 60%;
+            width: 50%;
             img {
                 width: 60%;
                 transition: 0.5s cubic-bezier(.22,.82,.83,1);
@@ -56,7 +56,7 @@ section {
             }
         }
         .textContainer {
-            width: 40%;
+            width: 50%;
             h2 {
                 padding-bottom: 30px;
                 text-shadow: 5px 5px red;
@@ -66,13 +66,22 @@ section {
                 justify-content: center;
                 .typeContainer, .abilitiesContainer {
                     padding: 10px;
+                    width: 50%;
                     h3 {
                         padding: 10px;
                         text-shadow: 5px 5px red;
                     }
                     li {
-                        padding: 1px;
+                        padding: 10px;
                         margin: auto;
+                        height: 50px;
+                        text-transform: capitalize;
+                        &:hover .icon {
+                            filter: drop-shadow(0 10px 0.6rem black);
+                            width: 32px;
+                            animation: wobble;
+                            animation-duration: 0.5s;
+                        }
                 
                     }
                 }
@@ -86,21 +95,17 @@ section {
         }
     }
 
-    .fade {
-        opacity: 100%;
-        transition: opacity 1s ease-out;
-    }
-
     // class for pokemon type icons
-    .typeIcon {
+    .icon {
        width: 30px;
        margin-bottom: -10px;
        padding-top: 10px;
+       transition: 0.5s cubic-bezier(.22,.82,.83,1) ease;
+       transition: animation wobble;
+    
     }
 
-
-    
-    .pikachuGif {
+   .pikachuGif {
         display: flex;
         justify-content: center;
         margin-top: 20px;

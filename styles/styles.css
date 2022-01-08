@@ -336,7 +336,7 @@ section .pokemonInfo {
   height: 50vh;
 }
 section .pokemonInfo .imgContainer {
-  width: 60%;
+  width: 50%;
 }
 section .pokemonInfo .imgContainer img {
   width: 60%;
@@ -349,7 +349,7 @@ section .pokemonInfo .imgContainer img:hover {
           filter: drop-shadow(0 10px 0.6rem black);
 }
 section .pokemonInfo .textContainer {
-  width: 40%;
+  width: 50%;
 }
 section .pokemonInfo .textContainer h2 {
   padding-bottom: 30px;
@@ -365,14 +365,26 @@ section .pokemonInfo .textContainer .typeAndAbilities {
 }
 section .pokemonInfo .textContainer .typeAndAbilities .typeContainer, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer {
   padding: 10px;
+  width: 50%;
 }
 section .pokemonInfo .textContainer .typeAndAbilities .typeContainer h3, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer h3 {
   padding: 10px;
   text-shadow: 5px 5px red;
 }
 section .pokemonInfo .textContainer .typeAndAbilities .typeContainer li, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer li {
-  padding: 1px;
+  padding: 10px;
   margin: auto;
+  height: 50px;
+  text-transform: capitalize;
+}
+section .pokemonInfo .textContainer .typeAndAbilities .typeContainer li:hover .icon, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer li:hover .icon {
+  -webkit-filter: drop-shadow(0 10px 0.6rem black);
+          filter: drop-shadow(0 10px 0.6rem black);
+  width: 32px;
+  -webkit-animation: wobble;
+          animation: wobble;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 section .imgPlaceholder {
   padding: 100px;
@@ -380,15 +392,16 @@ section .imgPlaceholder {
 section .imgPlaceholder img {
   width: 20%;
 }
-section .fade {
-  opacity: 100%;
-  -webkit-transition: opacity 1s ease-out;
-  transition: opacity 1s ease-out;
-}
-section .typeIcon {
+section .icon {
   width: 30px;
   margin-bottom: -10px;
   padding-top: 10px;
+  -webkit-transition: 0.5s cubic-bezier(0.22, 0.82, 0.83, 1) ease;
+  transition: 0.5s cubic-bezier(0.22, 0.82, 0.83, 1) ease;
+  -webkit-transition: -webkit-animation wobble;
+  transition: -webkit-animation wobble;
+  transition: animation wobble;
+  transition: animation wobble, -webkit-animation wobble;
 }
 section .pikachuGif {
   display: -webkit-box;
@@ -458,6 +471,9 @@ footer {
     padding-bottom: 0;
     padding-top: 20px;
   }
+  section .pokemonInfo .textContainer .pokemonId h4 {
+    padding-top: 15px;
+  }
 }
 @media (max-width: 846px) {
   section .pikachuGif {
@@ -479,14 +495,17 @@ footer {
   section .pokemonInfo .imgContainer img:hover {
     width: 100%;
   }
-  section .pokemonInfo .typeAndAbilities {
+  section .pokemonInfo .textContainer .typeAndAbilities {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  section .pokemonInfo .typeAndAbilities h2 {
+  section .pokemonInfo .textContainer .typeAndAbilities h2 {
     padding-top: 0;
+  }
+  section .pokemonInfo .textContainer .typeAndAbilities .typeContainer, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer {
+    width: 100%;
   }
 }
 @media (max-width: 700px) {
