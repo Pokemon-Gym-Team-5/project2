@@ -400,6 +400,7 @@ section .pikachuGif img {
 section button {
   padding: 20px 40px;
   border: transparent;
+  border-radius: 15px;
   margin: 50px 0;
   background-color: #FFDE00;
   border: 5px solid #CC0000;
@@ -418,4 +419,82 @@ section button:hover {
 footer {
   padding: 20px;
   background: #CC0000;
+}
+
+@media (max-width: 1060px) {
+  section .pokemonInfo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+    height: 80vh;
+    padding: 40px 30px 20px 30px;
+  }
+  section .pokemonInfo .imgContainer, section .pokemonInfo .textContainer {
+    width: 100%;
+    height: 50%;
+  }
+  section .pokemonInfo .imgContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section .pokemonInfo .imgContainer img {
+    width: 200px;
+  }
+  section .pokemonInfo .textContainer h2 {
+    padding-bottom: 0;
+    padding-top: 20px;
+  }
+}
+@media (max-width: 846px) {
+  section .pikachuGif {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section .pikachuGif button {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  section .pokemonInfo {
+    height: 90vh;
+  }
+  section .pokemonInfo .imgContainer img:hover {
+    width: 100%;
+  }
+  section .pokemonInfo .typeAndAbilities {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section .pokemonInfo .typeAndAbilities h2 {
+    padding-top: 0;
+  }
+}
+@media (max-width: 700px) {
+  section .pokemonInfo {
+    width: 80%;
+  }
+  section .pokemonInfo .imgContainer img:hover {
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+  section .pokemonInfo {
+    width: 95%;
+    height: 100vh;
+  }
 }

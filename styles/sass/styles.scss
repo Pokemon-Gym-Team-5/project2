@@ -3,6 +3,7 @@
 @import "partials/variables";
 @import "partials/typography";
 
+
 // general styles
 .wrapper {
     margin: 0 auto;
@@ -100,6 +101,7 @@ section {
     button {
         padding: 20px 40px;
         border: transparent;
+        border-radius: 15px;
         margin: 50px 0;
         background-color: $yellowColor;
         border: 5px solid $primaryRed;
@@ -121,3 +123,5 @@ footer {
     padding: 20px;
     background: $primaryRed;
 }
+
+@import "partials/mediaqueries";

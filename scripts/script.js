@@ -8,11 +8,32 @@ pokemonApp.placeholder = {
     abilities: "??????????"
 }
 
+pokemonApp.typeIcon = [
+    {bug:  "./assets/pokemon-type-icon/Bug.webp"},
+    {dark:  "./assets/pokemon-type-icon/Dark.webp"},
+    {dragon:  "./assets/pokemon-type-icon/Dragon.webp"},
+    {electric:  "./assets/pokemon-type-icon/Electric.webp"},
+    {fariy:  "./assets/pokemon-type-icon/Fairy.webp"},
+    {fighting:  "./assets/pokemon-type-icon/Fighting.webp"},
+    {fire:  "./assets/pokemon-type-icon/Fire.webp"},
+    {flying:  "./assets/pokemon-type-icon/Flying.webp"},
+    {ghost:  "./assets/pokemon-type-icon/Ghost.webp"},
+    {grass:  "./assets/pokemon-type-icon/Grass.webp"},
+    {ground:  "./assets/pokemon-type-icon/Ground.webp"},
+    {ice:  "./assets/pokemon-type-icon/Ice.webp"},
+    {normal:  "./assets/pokemon-type-icon/Normal.webp"},
+    {poison:  "./assets/pokemon-type-icon/Poison.webp"},
+    {psychic:  "./assets/pokemon-type-icon/Psychic.webp"},
+    {rock:  "./assets/pokemon-type-icon/Rock.webp"},
+    {steel:  "./assets/pokemon-type-icon/Steel.webp"},
+    {water:  "./assets/pokemon-type-icon/Water.webp"}
+]
+
 
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
 
 pokemonApp.btn = document.querySelector('.randomBtn')
-pokemonApp.img = document.querySelector('.imgContaniner')
+pokemonApp.img = document.querySelector('.imgContainer')
 pokemonApp.name = document.querySelector('.pokemonName')
 pokemonApp.type = document.querySelector('.pokemonType')
 pokemonApp.abilities = document.querySelector('.pokemonAbilities')
