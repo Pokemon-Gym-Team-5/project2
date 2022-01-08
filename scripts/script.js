@@ -96,18 +96,15 @@ pokemonApp.displayPokemon = (jsonResults2) => {
 
     const arrayListOfType = jsonResults2.types
     arrayListOfType.forEach((arrayTypes) => {
-        const IconLiElement = document.createElement('li')
+        const iconLiElement = document.createElement('li')
         const iconElement = document.createElement('img')
-        // typeElement.innerHTML = arrayTypes.type.name
-        // pokemonApp.type.appendChild(typeElement);
+      
 
         for (let item in pokemonApp.typeIcon) {
             if (item === arrayTypes.type.name) {
-                iconElement.src = pokemonApp.typeIcon[item]
-                iconElement.alt = `icon for ${item}`
-                iconElement.classList.add('typeIcon')
-                IconLiElement.appendChild(iconElement);
-                pokemonApp.type.appendChild(IconLiElement);
+                iconLiElement.innerHTML = `<img class="typeIcon" src=${pokemonApp.typeIcon[item]} alt="icon for ${item} types">`
+                iconLiElement.appendChild(document.createTextNode(item));
+                pokemonApp.type.appendChild(iconLiElement);
             }
         }
 

@@ -291,10 +291,6 @@ footer a {
   font-size: 0.8rem;
 }
 
-.typeIcon {
-  width: 10px;
-}
-
 .wrapper {
   margin: 0 auto;
   max-width: 1200px;
@@ -376,6 +372,7 @@ section .pokemonInfo .textContainer .typeAndAbilities .typeContainer h3, section
 }
 section .pokemonInfo .textContainer .typeAndAbilities .typeContainer li, section .pokemonInfo .textContainer .typeAndAbilities .abilitiesContainer li {
   padding: 1px;
+  margin: auto;
 }
 section .imgPlaceholder {
   padding: 100px;
@@ -390,6 +387,8 @@ section .fade {
 }
 section .typeIcon {
   width: 30px;
+  margin-bottom: -10px;
+  padding-top: 10px;
 }
 section .pikachuGif {
   display: -webkit-box;

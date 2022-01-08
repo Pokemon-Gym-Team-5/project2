@@ -72,6 +72,8 @@ section {
                     }
                     li {
                         padding: 1px;
+                        margin: auto;
+                
                     }
                 }
             }
@@ -89,9 +91,14 @@ section {
         transition: opacity 1s ease-out;
     }
 
+    // class for pokemon type icons
     .typeIcon {
        width: 30px;
+       margin-bottom: -10px;
+       padding-top: 10px;
     }
+
+
     
     .pikachuGif {
         display: flex;
