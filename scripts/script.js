@@ -8,6 +8,27 @@ pokemonApp.placeholder = {
     abilities: "??????????"
 }
 
+pokemonApp.typeIcon = [
+    {bug:  "./assets/pokemon-type-icon/Bug.webp"},
+    {dark:  "./assets/pokemon-type-icon/Dark.webp"},
+    {dragon:  "./assets/pokemon-type-icon/Dragon.webp"},
+    {electric:  "./assets/pokemon-type-icon/Electric.webp"},
+    {fariy:  "./assets/pokemon-type-icon/Fairy.webp"},
+    {fighting:  "./assets/pokemon-type-icon/Fighting.webp"},
+    {fire:  "./assets/pokemon-type-icon/Fire.webp"},
+    {flying:  "./assets/pokemon-type-icon/Flying.webp"},
+    {ghost:  "./assets/pokemon-type-icon/Ghost.webp"},
+    {grass:  "./assets/pokemon-type-icon/Grass.webp"},
+    {ground:  "./assets/pokemon-type-icon/Ground.webp"},
+    {ice:  "./assets/pokemon-type-icon/Ice.webp"},
+    {normal:  "./assets/pokemon-type-icon/Normal.webp"},
+    {poison:  "./assets/pokemon-type-icon/Poison.webp"},
+    {psychic:  "./assets/pokemon-type-icon/Psychic.webp"},
+    {rock:  "./assets/pokemon-type-icon/Rock.webp"},
+    {steel:  "./assets/pokemon-type-icon/Steel.webp"},
+    {water:  "./assets/pokemon-type-icon/Water.webp"}
+]
+
 
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
 
@@ -29,16 +50,16 @@ window.addEventListener("DOMContentLoaded", () => {
     nameElementHolder.innerHTML = placeholder.name
     typeElementHolder.innerHTML = placeholder.type
     abilitiesElementHolder.innerHTML = placeholder.abilities
-
-
+    
+    
     pokemonApp.img.appendChild(imgElementHolder);
     pokemonApp.name.appendChild(nameElementHolder);
     pokemonApp.type.appendChild(typeElementHolder);
     pokemonApp.abilities.appendChild(abilitiesElementHolder);
-    
-    
-    
+   
 });
+
+
 
 pokemonApp.getAllPokemon = () => {
     fetch(pokemonApp.url).then((res) => {
@@ -58,7 +79,6 @@ pokemonApp.getRandom = (jsonResults1) => {
         }).then((jsonData) => {
             pokemonApp.displayPokemon(jsonData)
         });
-        // pokemonApp.img.classList.add('fade')
         pokemonApp.img.innerHTML = '';
         pokemonApp.name.innerHTML = '';
         pokemonApp.type.innerHTML = '';
@@ -67,17 +87,25 @@ pokemonApp.getRandom = (jsonResults1) => {
     });
 };
 
+
+
 pokemonApp.displayPokemon = (jsonResults2) => {
     
     const imgElement = document.createElement('img')
     const nameElement = document.createElement('h2')
+    const typeIconArray = pokemonApp.typeIcon
     
     const arrayListOfType = jsonResults2.types
     arrayListOfType.forEach((arrayTypes) => {
         const typeElement = document.createElement('li')
-        typeElement.innerHTML = arrayTypes.type.name
+        const type = arrayTypes.type.name
+        typeElement.innerHTML = type
         pokemonApp.type.appendChild(typeElement);
+
+        console.log(arrayTypes)
     });
+
+    
     
     const arrayListOfAbilities = jsonResults2.abilities;
     arrayListOfAbilities.forEach((arrayAbilities) => {
@@ -92,7 +120,7 @@ pokemonApp.displayPokemon = (jsonResults2) => {
     
     pokemonApp.img.appendChild(imgElement);
     pokemonApp.name.appendChild(nameElement);
-    // pokemonApp.img.classList.remove('fade')
+    
     
 };
 
