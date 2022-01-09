@@ -6,7 +6,7 @@
         .pokemonInfo {
             flex-direction: column;
             width: 60%;
-            height: 80vh;
+            height: 700px;
             padding: 0 20px;
             .imgContainer, .textContainer {
                 width: 100%;
@@ -18,6 +18,9 @@
                 justify-content: center;
                 img {
                     width: 200px;
+                    &:hover {
+                        width: 60%;
+                    }
                 }
             }
             .textContainer {
@@ -48,11 +51,10 @@
         }
         .pokemonInfo {
             height: 1000px;
-
             .imgContainer {
                 img {
                     &:hover {
-                        width: 100%;
+                        width: 90%;
                     }
                 }
             }

@@ -335,7 +335,7 @@ section .pokemonInfo {
   border: 10px solid #CC0000;
   border-radius: 50px;
   padding: 20px;
-  height: 50vh;
+  height: 450px;
 }
 section .pokemonInfo .imgContainer {
   width: 50%;
@@ -461,7 +461,7 @@ footer p {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 60%;
-    height: 80vh;
+    height: 700px;
     padding: 0 20px;
   }
   section .pokemonInfo .imgContainer, section .pokemonInfo .textContainer {
@@ -481,6 +481,9 @@ footer p {
   }
   section .pokemonInfo .imgContainer img {
     width: 200px;
+  }
+  section .pokemonInfo .imgContainer img:hover {
+    width: 60%;
   }
   section .pokemonInfo .textContainer h2 {
     padding-bottom: 10px;
@@ -508,7 +511,7 @@ footer p {
     height: 1000px;
   }
   section .pokemonInfo .imgContainer img:hover {
-    width: 100%;
+    width: 90%;
   }
   section .pokemonInfo .textContainer .typeAndAbilities {
     -webkit-box-orient: vertical;
