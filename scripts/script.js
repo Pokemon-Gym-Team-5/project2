@@ -6,8 +6,8 @@ pokemonApp.placeholder = {
     img: "./assets/pokeball.png",
     alt: "photo of pokeball",
     name: "Pokeball",
-    type: "????????",
-    abilities: "??????????"
+    type: "?????",
+    abilities: "?????"
 }
 
 // Icons that represent the type of pokemon
@@ -101,7 +101,6 @@ pokemonApp.getRandom = (jsonResults1) => {
 
 // Displaying all pokemon content from API
 pokemonApp.displayPokemon = (jsonResults2) => {
-    console.log(jsonResults2.id)
     // Displaying type 
     
     const arrayListOfType = jsonResults2.types
