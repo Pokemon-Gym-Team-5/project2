@@ -505,7 +505,7 @@ footer p {
     margin-bottom: 20px;
   }
   section .pokemonInfo {
-    height: 140vh;
+    height: 1000px;
   }
   section .pokemonInfo .imgContainer img:hover {
     width: 100%;
