@@ -16,7 +16,7 @@ pokemonApp.typeIcon = {
     dark: "./assets/pokemon-type-icon/Dark.webp",
     dragon: "./assets/pokemon-type-icon/Dragon.webp",
     electric: "./assets/pokemon-type-icon/Electric.webp",
-    fariy: "./assets/pokemon-type-icon/Fairy.webp",
+    fairy: "./assets/pokemon-type-icon/Fairy.webp",
     fighting: "./assets/pokemon-type-icon/Fighting.webp",
     fire: "./assets/pokemon-type-icon/Fire.webp",
     flying: "./assets/pokemon-type-icon/Flying.webp",
