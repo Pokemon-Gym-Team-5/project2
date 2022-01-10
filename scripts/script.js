@@ -87,13 +87,14 @@ pokemonApp.getRandom = (jsonResults1) => {
         fetch(jsonResults1[randomNum].url).then((res) => {
             return res.json()
         }).then((jsonData) => {
-            pokemonApp.displayPokemon(jsonData)
             pokemonApp.img.innerHTML = '';
             pokemonApp.name.innerHTML = '';
             pokemonApp.type.innerHTML = '';
             pokemonApp.abilities.innerHTML = '';
             pokemonApp.id.innerHTML = '';
+            pokemonApp.displayPokemon(jsonData);
         });
+
     });
 };
 
