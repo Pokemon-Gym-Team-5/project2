@@ -39,6 +39,29 @@ pokemonApp.abilitiesIcon = {
     3:"./assets/abilities-icons/Successor_Platinum.webp",
 }
 
+// Animations Array
+
+pokemonApp.animations = [
+    "animate__bounce",
+    "animate__rubberBand",
+    "animate__shakeY",
+    "animate__shakeX",
+    "animate__headShake",
+    "animate__swing",
+    "animate__tada",
+    "animate__wobble",
+    "animate__jello",
+    "animate__heartBeat",
+    "animate__bounceInDown",
+    "animate__fadeInDown",
+    "animate__flip",
+    "animate__lightSpeedInRight",
+    "animate__lightSpeedInLeft",
+    "animate__rotateIn",
+    "animate__jackInTheBox",
+    "animate__rollIn"
+]
+
 
 // Getting inital load content on page 
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
@@ -49,6 +72,7 @@ pokemonApp.name = document.querySelector('.pokemonName')
 pokemonApp.type = document.querySelector('.pokemonType')
 pokemonApp.abilities = document.querySelector('.pokemonAbilities')
 pokemonApp.id = document.querySelector('.pokemonId')
+pokemonApp.infoBtn = document.querySelector('.infoBtn')
 
 window.addEventListener("DOMContentLoaded", () => {
     const placeholder = pokemonApp.placeholder
@@ -69,6 +93,19 @@ window.addEventListener("DOMContentLoaded", () => {
     pokemonApp.type.appendChild(typeElementHolder);
     pokemonApp.abilities.appendChild(abilitiesElementHolder);
 });
+
+
+
+// Click event for info button 
+pokemonApp.infoBtn.addEventListener('click', () => {
+    const bubble1 = document.querySelector('.bubble1')
+    const bubble2 = document.querySelector('.bubble2')
+    const bubble3 = document.querySelector('.bubble3')
+
+    bubble1.classList.toggle('bubbleFade1')
+    bubble2.classList.toggle('bubbleFade2')
+    bubble3.classList.toggle('bubbleFade3')
+})
 
 // API call that gets the entire list of pokemon
 pokemonApp.getAllPokemon = () => {
@@ -136,11 +173,24 @@ pokemonApp.displayPokemon = (jsonResults2) => {
         
     });
     
-    // Displaying images  
+    // Displaying images
     const imgElement = document.createElement('img')
     imgElement.src = jsonResults2.sprites.other['official-artwork'].front_default
     imgElement.alt = `photo of ${jsonResults2.name}`
     pokemonApp.img.appendChild(imgElement);
+
+    imgElement.addEventListener('click', () => {
+        imgElement.className = ''
+    })
+
+    // Click event for image animation
+    imgElement.addEventListener('click', () => {
+        const animations = pokemonApp.animations
+        randomNum = Math.floor(Math.random() * animations.length)
+        imgElement.classList.add('animate__animated')
+        imgElement.classList.add(animations[randomNum])
+        
+    })
     
     // Displayiing name
     const nameElement = document.createElement('h2')

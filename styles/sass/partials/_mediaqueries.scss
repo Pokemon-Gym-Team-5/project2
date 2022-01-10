@@ -76,6 +76,11 @@
 
 @media (max-width: 700px) {
     section {
+        .bubble3 {
+            right: 32px;
+            top: 140px;
+            width: 90%;
+        }
         .pokemonInfo {
             width: 80%;
             .imgContainer {
@@ -91,6 +96,11 @@
 
 @media (max-width: 500px) {
     section {
+        .bubble3 {
+            width: 95%;
+            right: 12px;
+            
+        }
         .pokemonInfo {
             width: 95%;
         }
