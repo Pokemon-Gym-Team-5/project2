@@ -62,8 +62,7 @@ pokemonApp.animations = [
     "animate__rollIn"
 ]
 
-
-// Getting initial load content on page 
+// Variables
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
 
 pokemonApp.btn = document.querySelector('.randomBtn')
@@ -73,6 +72,8 @@ pokemonApp.type = document.querySelector('.pokemonType')
 pokemonApp.abilities = document.querySelector('.pokemonAbilities')
 pokemonApp.id = document.querySelector('.pokemonId')
 pokemonApp.infoBtn = document.querySelector('.infoBtn')
+
+// Getting initial load content on page 
 
 window.addEventListener("DOMContentLoaded", () => {
     const placeholder = pokemonApp.placeholder
@@ -178,9 +179,11 @@ pokemonApp.displayPokemon = (jsonResults2) => {
     imgElement.alt = `photo of ${jsonResults2.name}`
     pokemonApp.img.appendChild(imgElement);
 
+
+    // Clears class of image for animation
     imgElement.addEventListener('click', () => {
         imgElement.className = ''
-    })
+    });
 
     // Click event for image animation
     imgElement.addEventListener('click', () => {
@@ -188,8 +191,7 @@ pokemonApp.displayPokemon = (jsonResults2) => {
         randomNum = Math.floor(Math.random() * animations.length)
         imgElement.classList.add('animate__animated')
         imgElement.classList.add(animations[randomNum])
-        
-    })
+    });
     
     // Displaying name
     const nameElement = document.createElement('h2')
