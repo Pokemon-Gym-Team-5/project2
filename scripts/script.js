@@ -63,7 +63,7 @@ pokemonApp.animations = [
 ]
 
 
-// Getting inital load content on page 
+// Getting initial load content on page 
 pokemonApp.url = 'https://pokeapi.co/api/v2/pokemon?limit=898';
 
 pokemonApp.btn = document.querySelector('.randomBtn')
@@ -161,7 +161,7 @@ pokemonApp.displayPokemon = (jsonResults2) => {
     arrayListOfAbilities.forEach((arrayAbilities) => {
         const abilitiesLiElement = document.createElement('li')
         
-        // If statment for abilites icon
+        // If statement for abilites icon
         for (let item in pokemonApp.abilitiesIcon) {
             if (item == arrayAbilities.slot) {
                 abilitiesLiElement.innerHTML = `<img class="icon" src=${pokemonApp.abilitiesIcon[item]} alt="abilities icon">`
@@ -191,12 +191,12 @@ pokemonApp.displayPokemon = (jsonResults2) => {
         
     })
     
-    // Displayiing name
+    // Displaying name
     const nameElement = document.createElement('h2')
     nameElement.innerHTML = jsonResults2.name
     pokemonApp.name.appendChild(nameElement);
     
-    // Displaing ID# 
+    // Displaying ID# 
     const idElement = document.createElement('h4')
     idElement.innerText = `#${jsonResults2.id}`
     pokemonApp.id.appendChild(idElement);
